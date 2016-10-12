@@ -76,11 +76,13 @@ public extension DispatchSourceTimer {
 
 public extension DispatchTime {
 	public func since(_ previous: DispatchTime) -> DispatchTimeInterval {
-		return .nanoseconds(Int(uptimeNanoseconds - previous.uptimeNanoseconds))
+        let difference = Int64(uptimeNanoseconds) - Int64(previous.uptimeNanoseconds)
+		return .nanoseconds(Int(difference))
 	}
 }
 
 public extension DispatchTimeInterval {
+    
 	public static func fromSeconds(_ seconds: Double) -> DispatchTimeInterval {
 		return .nanoseconds(Int(seconds * Double(NSEC_PER_SEC)))
 	}
@@ -94,3 +96,16 @@ public extension DispatchTimeInterval {
 		}
 	}
 }
+
+extension DispatchTimeInterval : Equatable {}
+
+public func ==(lhs: DispatchTimeInterval, rhs: DispatchTimeInterval) -> Bool {
+    return lhs.toSeconds() == rhs.toSeconds()
+}
+
+extension DispatchTimeInterval : Comparable {}
+
+public func < (lhs : DispatchTimeInterval, rhs : DispatchTimeInterval) -> Bool {
+    return lhs.toSeconds() < rhs.toSeconds()
+}
+
