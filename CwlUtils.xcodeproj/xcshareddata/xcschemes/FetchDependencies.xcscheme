@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C95BDE9A1E41688B00AAA64B"
-               BuildableName = "CwlUtils.framework"
-               BlueprintName = "CwlUtils_iOS"
+               BlueprintIdentifier = "C945D7B71E5033C6009AFB8E"
+               BuildableName = "FetchDependencies"
+               BlueprintName = "FetchDependencies"
                ReferencedContainer = "container:CwlUtils.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,26 +28,7 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C95BDEB81E4168B800AAA64B"
-               BuildableName = "CwlUtils_iOSTests.xctest"
-               BlueprintName = "CwlUtils_iOSTests"
-               ReferencedContainer = "container:CwlUtils.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C95BDE9A1E41688B00AAA64B"
-            BuildableName = "CwlUtils.framework"
-            BlueprintName = "CwlUtils_iOS"
-            ReferencedContainer = "container:CwlUtils.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -64,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C95BDE9A1E41688B00AAA64B"
-            BuildableName = "CwlUtils.framework"
-            BlueprintName = "CwlUtils_iOS"
+            BlueprintIdentifier = "C945D7B71E5033C6009AFB8E"
+            BuildableName = "FetchDependencies"
+            BlueprintName = "FetchDependencies"
             ReferencedContainer = "container:CwlUtils.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -82,9 +63,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C95BDE9A1E41688B00AAA64B"
-            BuildableName = "CwlUtils.framework"
-            BlueprintName = "CwlUtils_iOS"
+            BlueprintIdentifier = "C945D7B71E5033C6009AFB8E"
+            BuildableName = "FetchDependencies"
+            BlueprintName = "FetchDependencies"
             ReferencedContainer = "container:CwlUtils.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
