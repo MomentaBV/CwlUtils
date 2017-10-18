@@ -87,17 +87,18 @@ public extension DispatchTimeInterval {
 		return .nanoseconds(Int(seconds * Double(NSEC_PER_SEC)))
 	}
 
-	public func toSeconds() -> Double {
+    public var inSeconds: Double {
 		switch self {
-		case .seconds(let t): return Double(t)
-		case .milliseconds(let t): return (1.0 / Double(NSEC_PER_MSEC)) * Double(t)
-		case .microseconds(let t): return (1.0 / Double(NSEC_PER_USEC)) * Double(t)
-		case .nanoseconds(let t): return (1.0 / Double(NSEC_PER_SEC)) * Double(t)
-        case .never: return Double.greatestFiniteMagnitude
+		case .seconds(let t):
+            return Double(t)
+		case .milliseconds, .microseconds, .nanoseconds:
+            return (1.0 / Double(NSEC_PER_SEC)) * Double(inNanoseconds)
+        case .never:
+            return Double.greatestFiniteMagnitude
         }
 	}
 
-	public func toNanoseconds() -> Int {
+    public var inNanoseconds: Int {
 		switch self {
 		case .seconds(let t): return Int(NSEC_PER_SEC) * t
 		case .milliseconds(let t): return Int(NSEC_PER_MSEC) * t
@@ -109,12 +110,12 @@ public extension DispatchTimeInterval {
 }
 
 public func ==(lhs: DispatchTimeInterval, rhs: DispatchTimeInterval) -> Bool {
-    return lhs.toSeconds() == rhs.toSeconds()
+    return lhs.inSeconds == rhs.inSeconds
 }
 
-extension DispatchTimeInterval : Comparable {}
+extension DispatchTimeInterval: Comparable {}
 
-public func < (lhs : DispatchTimeInterval, rhs : DispatchTimeInterval) -> Bool {
-    return lhs.toSeconds() < rhs.toSeconds()
+public func < (lhs: DispatchTimeInterval, rhs: DispatchTimeInterval) -> Bool {
+    return lhs.inSeconds < rhs.inSeconds
 }
 
