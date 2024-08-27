@@ -117,7 +117,7 @@ public func ==(lhs: DispatchTimeInterval, rhs: DispatchTimeInterval) -> Bool {
     return lhs.inSeconds == rhs.inSeconds
 }
 
-extension DispatchTimeInterval: Comparable {}
+extension DispatchTimeInterval: @retroactive Comparable {}
 
 public func < (lhs: DispatchTimeInterval, rhs: DispatchTimeInterval) -> Bool {
     return lhs.inSeconds < rhs.inSeconds
